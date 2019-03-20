@@ -1,0 +1,40 @@
+
+body{
+text-align:center;
+background-color:black;
+margin:0;
+
+}
+
+
+nav{
+border-style:outset;
+border-color:blueviolet;
+background-color: rgb(102, 19, 19); 
+width: 100%;
+display:flex;
+flex-wrap:wrap;
+flex-direction:row;
+justify-content:space-around;
+}
+ nav a {
+padding:20px;
+  color: white;
+  
+}
+ a:hover:not(.active) {
+  background-color: rgb(20, 49, 219);
+}
+.active {
+  background-color: rgb(59, 129, 170);
+}
+
+h1{
+color:aquamarine;
+
+}
+main{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+}

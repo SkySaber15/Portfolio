@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Lobster|PT+Serif|Playfair+Display');
+
+body {
+  background-color: black;
+color: white;
+text-align: center;
+
+}
+.rounded{
+  border-radius:1em;
+
+  }
+
+h1 {
+ color:white;
+font-family: 'Lobster', cursive;
+font-size: 100px;
+margin-left: 200px;
+}
+h2 {
+ color:rgb(49, 141, 63);
+font-family: 'Lobster', cursive;
+font-size: 40px;
+margin-left: 200px;
+}
+h3 {
+ color:rgb(21, 49, 204);
+font-family: 'Lobster', cursive;
+font-size: 40px;
+margin-left: 200px;
+}
+h4 {
+ color:rgb(221, 42, 197);
+font-family: 'Lobster', cursive;
+font-size: 40px;
+margin-left: 200px;
+}
+p{
+  color: white;
+  margin-left: 50px;
+  background-color:navy;
+  opacity:0.55;
+  border-radius:0.5em;
+ font-family: 'Libre Baskerville', serif;
+  width:100%;
+font-weight: lighter;
+
+ }
+
+
+
+  form{
+    color:rgb(115, 155, 172);
+    font-size:20px;
+  }
+tr{
+  color:aqua;
+
+}
+
+  #bigletter{
+
+    font-size:30px;
+  }
