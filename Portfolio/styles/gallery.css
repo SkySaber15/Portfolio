@@ -1,9 +1,8 @@
 .row > .column {
   padding: 18px;
-
+  column-count: 4;
+  column-gap: 20px
 }
-
-
 
 .row:after {
   content: "";
@@ -15,7 +14,7 @@
 
 .column {
   float: left;
-  width: 40%;
+  width: 25%;
 }
 
 /* The Modal (background) */
@@ -69,10 +68,10 @@
 .next {
   cursor: pointer;
   position: absolute;
-  top: 120%;
+  top: 100%;
   width: auto;
   padding: 10px;
-  margin-top: -50px;
+  margin-top: -70px;
   color: green;
   font-weight: bold;
   font-size: 40px;
