@@ -1,53 +1,41 @@
-"use strict";
-var imagies = ["GameDesign1.jpg", "GameDesign2.jpg", "GameDesign3.jpg", "GameDesign4.jpg", "GameDesign5.jpg", "GameDesign6.jpg", "GameDesign7.jpg", "GameDesign8.jpg", "GameDesign9.jpg"];
+"use strict"
+// Open the Modal
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
 
+// Close the Modal
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
 
-$(document).ready(function() {
-  //
-  // $("#img1").click(function() {
-  //
-  //   $("#lightbox").css("width", "100%");
-  //   $("#lightbox").css("height", "100%");
-  //   $("#lightbox").css("background-color", "rgba(255, 105, 180, .75)");
-  //   $("#lightbox").css("display", "block");
-  //
-  //
-  // });
-  // $("#close").click(function() {
-  //   $("#lightbox").css("display", "none")
-  // });
+var slideIndex = 1;
+showSlides(slideIndex);
 
-  for (let i = 0; i < imagies.length; i++) {
-    var currentImage = imagies[i];
-    var imageId = "image" + i;
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-    $("body").append("<img id='" + imageId + "' class='gallery' src='imagies/" + currentImage + "' alt='GameDesign-image' />");
-    //$("body").append(`<img id='${imageId}' class='gallery' src='imagies/${currentImage}' alt='GameDesign-image' />`);
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-
-    $("#" + imageId).click(function() {
-
-      $("body").append(`<div id='lightbox'></div>`)
-      $("#lightbox").css({
-        "position": "fixed",
-        "top": "0",
-        "left": "0",
-        "text-align": "center",
-        "width": "100%",
-        "height": "100%",
-        "background-color": "rgba(0, 0, 0, .75)",
-        "display": "block",
-      })
-
-      $("#lightbox").append(" src='imagies/" + currentImage + "' alt='GameDesign-image' />")
-
-      $("#lightbox").click(function() {
-        $("#lightbox").remove();
-      })
-      console.log('Clicked' + i);
-    });
-
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
-  $(".gallery").css("width", "200px");
-  $(".gallery").css("margin-height", "10px");
-});
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}

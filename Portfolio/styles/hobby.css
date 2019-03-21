@@ -10,7 +10,13 @@ text-align: center;
   border-radius:1em;
 
   }
+table {
+margin-left: 150px
+}
+img {
+margin-left: 150px;
 
+}
 h1 {
  color:white;
 font-family: 'Lobster', cursive;
@@ -35,9 +41,16 @@ font-family: 'Lobster', cursive;
 font-size: 40px;
 margin-left: 200px;
 }
+h5 {
+ color:white;
+font-family: 'Lobster', cursive;
+font-size: 100px;
+margin-left: 100px;
+}
+
 p{
   color: white;
-  margin-left: 50px;
+  margin-left: 130px;
   background-color:navy;
   opacity:0.55;
   border-radius:0.5em;
